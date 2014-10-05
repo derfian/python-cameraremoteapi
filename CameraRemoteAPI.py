@@ -89,6 +89,8 @@ def __msearch(st=CRA_SSDP_ST):
     sender.setsockopt(socket.IPPROTO_IP,
                       socket.IP_MULTICAST_TTL,
                       1)
+    # FIXME: Need to figure out which interface is the right one if
+    # there are more than one. This is wrong.
     sender.setsockopt(socket.SOL_IP,
                       socket.IP_MULTICAST_IF,
                       socket.inet_pton(socket.AF_INET,
