@@ -73,6 +73,332 @@ class CameraRemoteAPI:
         r = requests.post(self.urls['camera'], data=json.dumps(vals), headers=self._json_headers)
         return r.json()['result'][0]
 
+    def setShootMode(self, shootmode):
+        raise NotImplemented
+
+    def getShootMode(self):
+        raise NotImplemented
+
+    def getSupportedShootMode(self):
+        raise NotImplemented
+
+    def getAvailableShootMode(self):
+        raise NotImplemented
+
+    def actTakePicture(self):
+        raise NotImplemented
+
+    def awaitTakePicture(self):
+        raise NotImplemented
+
+    def startContShooting(self):
+        raise NotImplemented
+
+    def stopContShooting(self):
+        raise NotImplemented
+
+    def startMovieRec(self):
+        raise NotImplemented
+
+    def stopMovieRec(self):
+        raise NotImplemented
+
+    def startAudioRec(self):
+        raise NotImplemented
+
+    def stopAudioRec(self):
+        raise NotImplemented
+
+    def startIntervalStillRec(self):
+        raise NotImplemented
+
+    def stopIntervalStillRec(self):
+        raise NotImplemented
+
+    def startLiveview(self):
+        raise NotImplemented
+
+    def stopLiveview(self):
+        raise NotImplemented
+
+    def startLiveviewWithSize(self):
+        raise NotImplemented
+
+    def getLiveviewSize(self):
+        raise NotImplemented
+
+    def getSupportedLiveviewSize(self):
+        raise NotImplemented
+
+    def getAvailableLiveviewSize(self):
+        raise NotImplemented
+
+    def setLiveviewFrameInfo(self):
+        raise NotImplemented
+
+    def getLiveviewFrameInfo(self):
+        raise NotImplemented
+
+    def actZoom(self):
+        raise NotImplemented
+
+    def setZoomSetting(self):
+        raise NotImplemented
+
+    def getZoomSetting(self):
+        raise NotImplemented
+
+    def getSupportedZoomSetting(self):
+        raise NotImplemented
+
+    def getAvailableZoomSetting(self):
+        raise NotImplemented
+
+    def actHalfPressShutter(self):
+        raise NotImplemented
+
+    def cancelHalfPressShutter(self):
+        raise NotImplemented
+
+    def setTouchAFPosition(self):
+        raise NotImplemented
+
+    def getTouchAFPosition(self):
+        raise NotImplemented
+
+    def cancelTouchAFPosition(self):
+        raise NotImplemented
+
+    def actTrackingFocus(self):
+        raise NotImplemented
+
+    def cancelTrackingFocus(self):
+        raise NotImplemented
+
+    def setTrackingFocus(self):
+        raise NotImplemented
+
+    def getTrackingFocus(self):
+        raise NotImplemented
+
+    def getSupportedTrackingFocus(self):
+        raise NotImplemented
+
+    def getAvailableTrackingFocus(self):
+        raise NotImplemented
+
+    def setContShootingMode(self):
+        raise NotImplemented
+
+    def getContShootingMode(self):
+        raise NotImplemented
+
+    def getSupportedContShootingMode(self):
+        raise NotImplemented
+
+    def getAvailableContShootingMode(self):
+        raise NotImplemented
+
+    def setContShootingSpeed(self):
+        raise NotImplemented
+
+    def getContShootingSpeed(self):
+        raise NotImplemented
+
+    def getSupportedContShootingSpeed(self):
+        raise NotImplemented
+
+    def getAvailableContShootingSpeed(self):
+        raise NotImplemented
+
+    def setSelfTimer(self):
+        raise NotImplemented
+
+    def getSelfTimer(self):
+        raise NotImplemented
+
+    def getSupportedSelfTimer(self):
+        raise NotImplemented
+
+    def getAvailableSelfTimer(self):
+        raise NotImplemented
+
+    def setExposureMode(self):
+        raise NotImplemented
+
+    def getExposureMode(self):
+        raise NotImplemented
+
+    def getSupportedExposureMode(self):
+        raise NotImplemented
+
+    def getAvailableExposureMode(self):
+        raise NotImplemented
+
+    def setFocusMode(self):
+        raise NotImplemented
+
+    def getFocusMode(self):
+        raise NotImplemented
+
+    def getSupportedFocusMode(self):
+        raise NotImplemented
+
+    def getAvailableFocusMode(self):
+        raise NotImplemented
+
+    def getExposureCompensation(self):
+        raise NotImplemented
+
+    def setExposureCompensation(self):
+        raise NotImplemented
+
+    def getSupportedExposureCompensation(self):
+        raise NotImplemented
+
+    def getAvailableExposureCompensation(self):
+        raise NotImplemented
+
+    def setFNumber(self):
+        raise NotImplemented
+
+    def getFNumber(self):
+        raise NotImplemented
+
+    def getSupportedFNumber(self):
+        raise NotImplemented
+
+    def getAvailableFNumber(self):
+        raise NotImplemented
+
+    def setShutterSpeed(self):
+        raise NotImplemented
+
+    def getShutterSpeed(self):
+        raise NotImplemented
+
+    def getSupportedShutterSpeed(self):
+        raise NotImplemented
+
+    def getAvailableShutterSpeed(self):
+        raise NotImplemented
+
+    def setIsoSpeedRate(self):
+        raise NotImplemented
+
+    def getIsoSpeedRate(self):
+        raise NotImplemented
+
+    def getSupportedIsoSpeedRate(self):
+        raise NotImplemented
+
+    def getAvailableIsoSpeedRate(self):
+        raise NotImplemented
+
+    def setWhiteBalance(self):
+        raise NotImplemented
+
+    def getWhiteBalance(self):
+        raise NotImplemented
+
+    def getSupportedWhiteBalance(self):
+        raise NotImplemented
+
+    def getAvailableWhiteBalance(self):
+        raise NotImplemented
+
+    def setProgramShift(self):
+        raise NotImplemented
+
+    def getSupportedProgramShift(self):
+        raise NotImplemented
+
+    def setFlashMode(self):
+        raise NotImplemented
+
+    def getFlashMode(self):
+        raise NotImplemented
+
+    def getSupportedFlashMode(self):
+        raise NotImplemented
+
+    def getAvailableFlashMode(self):
+        raise NotImplemented
+
+    def setStillSize(self):
+        raise NotImplemented
+
+    def getStillSize(self):
+        raise NotImplemented
+
+    def getSupportedStillSize(self):
+        raise NotImplemented
+
+    def getAvailableStillSize(self):
+        raise NotImplemented
+
+    def setStillQuality(self):
+        raise NotImplemented
+
+    def getStillQuality(self):
+        raise NotImplemented
+
+    def getSupportedStillQuality(self):
+        raise NotImplemented
+
+    def getAvailableStillQuality(self):
+        raise NotImplemented
+
+    def setPostviewImageSize(self):
+        raise NotImplemented
+
+    def getPostviewImageSize(self):
+        raise NotImplemented
+
+    def getSupportedPostviewImageSize(self):
+        raise NotImplemented
+
+    def getAvailablePostviewImageSize(self):
+        raise NotImplemented
+
+    def setMovieFileFormat(self):
+        raise NotImplemented
+
+    def getMovieFileFormat(self):
+        raise NotImplemented
+
+    def getSupportedMovieFileFormat(self):
+        raise NotImplemented
+
+    def getAvailableMovieFileFormat(self):
+        raise NotImplemented
+
+    def setMovieQuality(self):
+        raise NotImplemented
+
+    def getMovieQuality(self):
+        raise NotImplemented
+
+    def getSupportedMovieQuality(self):
+        raise NotImplemented
+
+    def getAvailableMovieQuality(self):
+        raise NotImplemented
+
+    def setSteadyMode(self):
+        raise NotImplemented
+
+    def getSteadyMode(self):
+        raise NotImplemented
+
+    def getSupportedSteadyMode(self):
+        raise NotImplemented
+
+    def getAvailableSteadyMode(self):
+        raise NotImplemented
+
+    ## Continue on page 145
+    
 def discover():
     resp = __msearch()
     _ddurl = resp.location
