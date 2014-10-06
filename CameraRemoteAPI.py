@@ -397,7 +397,192 @@ class CameraRemoteAPI:
     def getAvailableSteadyMode(self):
         raise NotImplemented
 
-    ## Continue on page 145
+    def setViewAngle(self):
+        raise NotImplemented
+
+    def getViewAngle(self):
+        raise NotImplemented
+
+    def getSupportedViewAngle(self):
+        raise NotImplemented
+
+    def getAvailableViewAngle(self):
+        raise NotImplemented
+
+    def setSceneSelection(self):
+        raise NotImplemented
+
+    def getSceneSelection(self):
+        raise NotImplemented
+
+    def getSupportedSceneSelection(self):
+        raise NotImplemented
+
+    def getAvailableSceneSelection(self):
+        raise NotImplemented
+
+    def setColorSetting(self):
+        raise NotImplemented
+
+    def getColorSetting(self):
+        raise NotImplemented
+
+    def getSupportedColorSetting(self):
+        raise NotImplemented
+
+    def getAvailableColorSetting(self):
+        raise NotImplemented
+
+    def setIntervalTime(self):
+        raise NotImplemented
+
+    def getIntervalTime(self):
+        raise NotImplemented
+
+    def getSupportedIntervalTime(self):
+        raise NotImplemented
+
+    def getAvailableIntervalTime(self):
+        raise NotImplemented
+
+    def setFlipSetting(self):
+        raise NotImplemented
+
+    def getFlipSetting(self):
+        raise NotImplemented
+
+    def getSupportedFlipSetting(self):
+        raise NotImplemented
+
+    def getAvailableFlipSetting(self):
+        raise NotImplemented
+
+    def setTvColorSystem(self):
+        raise NotImplemented
+
+    def getTvColorSystem(self):
+        raise NotImplemented
+
+    def getSupportedTvColorSystem(self):
+        raise NotImplemented
+
+    def getAvailableTvColorSystem(self):
+        raise NotImplemented
+
+    def startRecMode(self):
+        raise NotImplemented
+
+    def stopRecMode(self):
+        raise NotImplemented
+
+    def setCameraFunction(self):
+        raise NotImplemented
+
+    def getCameraFunction(self):
+        raise NotImplemented
+
+    def getSupportedCameraFunction(self):
+        raise NotImplemented
+
+    def getAvailableCameraFunction(self):
+        raise NotImplemented
+
+    def getSchemeList(self):
+        raise NotImplemented
+
+    def getSourceList(self):
+        raise NotImplemented
+
+    def getContentCount:1.2(self):
+        raise NotImplemented
+
+    def getContentList:1.3(self):
+        raise NotImplemented
+
+    def setStreamingContent(self):
+        raise NotImplemented
+
+    def startStreaming(self):
+        raise NotImplemented
+
+    def pauseStreaming(self):
+        raise NotImplemented
+
+    def seekStreamingPosition(self):
+        raise NotImplemented
+
+    def stopStreaming(self):
+        raise NotImplemented
+
+    def requestToNotifyStreamingStatus(self):
+        raise NotImplemented
+
+    def deleteContent:1.1(self):
+        raise NotImplemented
+
+    def setInfraredRemoteControl(self):
+        raise NotImplemented
+
+    def getInfraredRemoteControl(self):
+        raise NotImplemented
+
+    def getSupportedInfraredControl(self):
+        raise NotImplemented
+
+    def getAvailableInfraredControl(self):
+        raise NotImplemented
+
+    def setAutoPowerOff(self):
+        raise NotImplemented
+
+    def getAutoPowerOff(self):
+        raise NotImplemented
+
+    def getSupportedAutoPowerOff(self):
+        raise NotImplemented
+
+    def getAvailableAutoPowerOff(self):
+        raise NotImplemented
+
+    def setBeepMode(self):
+        raise NotImplemented
+
+    def getBeepMode(self):
+        raise NotImplemented
+
+    def getSupportedBeepMode(self):
+        raise NotImplemented
+
+    def getAvailableBeepMode(self):
+        raise NotImplemented
+
+    def setCurrentTime(self):
+        raise NotImplemented
+
+    def getStorageInformation(self):
+        raise NotImplemented
+
+    def getEvent:1.0(self):
+        raise NotImplemented
+
+    def getEvent:1.1(self):
+        raise NotImplemented
+
+    def getEvent:1.2(self):
+        raise NotImplemented
+
+    def getAvailableApiList(self):
+        raise NotImplemented
+
+    def getApplicationInfo(self):
+        raise NotImplemented
+
+    def getVersions(self):
+        raise NotImplemented
+
+    def getMethodTypes(self):
+        raise NotImplemented
+
     
 def discover():
     resp = __msearch()
