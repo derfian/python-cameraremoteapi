@@ -511,10 +511,10 @@ class CameraRemoteAPI:
     def getSourceList(self):
         raise NotImplemented
 
-    def getContentCount:1.2(self):
+    def getContentCount(self):
         raise NotImplemented
 
-    def getContentList:1.3(self):
+    def getContentList(self):
         raise NotImplemented
 
     def setStreamingContent(self):
@@ -535,7 +535,7 @@ class CameraRemoteAPI:
     def requestToNotifyStreamingStatus(self):
         raise NotImplemented
 
-    def deleteContent:1.1(self):
+    def deleteContent(self):
         raise NotImplemented
 
     def setInfraredRemoteControl(self):
@@ -580,13 +580,13 @@ class CameraRemoteAPI:
     def getStorageInformation(self):
         raise NotImplemented
 
-    def getEvent:1.0(self):
+    def getEvent(self):
         raise NotImplemented
 
-    def getEvent:1.1(self):
+    def getEvent(self):
         raise NotImplemented
 
-    def getEvent:1.2(self):
+    def getEvent(self):
         raise NotImplemented
 
     def getAvailableApiList(self):
