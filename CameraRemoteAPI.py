@@ -20,6 +20,8 @@ import socket
 import json
 import requests
 import xml.etree.ElementTree as ET
+import StringIO
+import httplib
 
 CRA_SSDP_MGRP = '239.255.255.250'
 CRA_SSDP_PORT = 1900
