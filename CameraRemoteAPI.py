@@ -18,6 +18,7 @@
 
 import socket
 import json
+import random
 import requests
 import xml.etree.ElementTree as ET
 import StringIO
@@ -64,9 +65,14 @@ class CameraRemoteError(Exception):
     """ Generic exception from within CameraRemoteAPI """
     pass
 
+class CameraRemoteRPCError(CameraRemoteError):
+    """ The API call failed. """
+    pass
+
 class CameraRemoteAPI:
     urls = {}
     _json_headers = {'Content-Type': "application/json",}
+    trace = False
 
     def __init__(self, ddxml):
         """Initialize the CameraRemoteAPI Object with a device description XML
@@ -80,16 +86,30 @@ class CameraRemoteAPI:
             serviceurl = service.find('{%(ns)s}X_ScalarWebAPI_ActionList_URL' % locals()).text
             self.urls[servicetype] = serviceurl + '/' + servicetype
 
+    def _apicall(self, endpoint, params):
+        params['id'] = random.randint(1, 0x7FFFFFF)
+
+        if not endpoint in self.urls:
+            raise CameraRemoteError("Unknown endpoint '%r'" % endpoint)
+
+        if self.trace:
+            print params
+        r = requests.post(self.urls[endpoint], data=json.dumps(params), headers=self._json_headers)
+        j = r.json()
+        r.close()
+        if 'error' in j:
+            raise CameraRemoteRPCError({'code': j['error'][0],
+                                        'message': j['error'][1]})
+        return j
 
     # Implement methods here:
     def getVersions(self):
+        endpoint = 'camera'
         vals = dict(method="getVersions",
                     params=[],
-                    id=1,
                     version="1.0")
-
-        r = requests.post(self.urls['camera'], data=json.dumps(vals), headers=self._json_headers)
-        return r.json()['result'][0]
+        resp = self._apicall(endpoint, vals)
+        return resp['result'][0]
 
     def setShootMode(self, shootmode):
         raise NotImplemented
