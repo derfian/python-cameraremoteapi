@@ -112,16 +112,36 @@ class CameraRemoteAPI:
         return resp['result'][0]
 
     def setShootMode(self, shootmode):
-        raise NotImplemented
+        endpoint = 'camera'
+        vals = dict(method="setShootMode",
+                    params=[shootmode],
+                    version="1.0")
+        resp = self._apicall(endpoint, vals)
+        return
 
     def getShootMode(self):
-        raise NotImplemented
+        endpoint = 'camera'
+        vals = dict(method="getShootMode",
+                    params=[],
+                    version="1.0")
+        resp = self._apicall(endpoint, vals)
+        return resp['result'][0]
 
     def getSupportedShootMode(self):
-        raise NotImplemented
+        endpoint = "camera"
+        vals = dict(method="getSupportedShootMode",
+                    params=[],
+                    version="1.0")
+        resp = self._apicall(endpoint, vals)
+        return resp['result']
 
     def getAvailableShootMode(self):
-        raise NotImplemented
+        endpoint = "camera"
+        vals = dict(method="getAvailableShootMode",
+                    params=[],
+                    version="1.0")
+        resp = self._apicall(endpoint, vals)
+        return resp['result']
 
     def actTakePicture(self):
         raise NotImplemented
