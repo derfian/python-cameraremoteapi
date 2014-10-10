@@ -19,8 +19,8 @@
 import socket
 import json
 import random
+import xml.etree.ElementTree as ElementTree
 import requests
-import xml.etree.ElementTree as ET
 import StringIO
 import httplib
 
@@ -77,7 +77,7 @@ class CameraRemoteAPI:
     def __init__(self, ddxml):
         """Initialize the CameraRemoteAPI Object with a device description XML
         file. FIXME: Reconsider this approach"""
-        _x = ET.fromstring(ddxml)
+        _x = ElementTree.fromstring(ddxml)
 
         ns = "urn:schemas-sony-com:av"
 
