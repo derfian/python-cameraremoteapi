@@ -595,9 +595,6 @@ class CameraRemoteAPI:
     def getApplicationInfo(self):
         raise NotImplemented
 
-    def getVersions(self):
-        raise NotImplemented
-
     def getMethodTypes(self):
         raise NotImplemented
 
