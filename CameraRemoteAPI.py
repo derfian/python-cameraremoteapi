@@ -184,7 +184,11 @@ class CameraRemoteAPI:
         return resp['result'][0]
 
     def stopMovieRec(self):
-        raise NotImplemented
+        resp = self._apicall('camera',
+                             method='stopMovieRec',
+                             params=[],
+                             version='1.0')
+        return resp['result'][0]
 
     def startAudioRec(self):
         raise NotImplemented
