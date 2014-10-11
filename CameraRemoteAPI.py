@@ -148,7 +148,11 @@ class CameraRemoteAPI:
         return resp['result']
 
     def actTakePicture(self):
-        raise NotImplemented
+        resp = self._apicall('camera',
+                             dict(method='actTakePicture',
+                                  params=[],
+                                  version='1.0'))
+        return resp['result'][0]
 
     def awaitTakePicture(self):
         raise NotImplemented
