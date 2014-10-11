@@ -101,6 +101,9 @@ class CameraRemoteAPI:
 
         if self.trace:
             print self.urls[endpoint], "->", j
+
+        # FIXME: Long exposures may signal errors while they're
+        # processing. Look into that.
         if 'error' in j:
             raise CameraRemoteRPCError({'code': j['error'][0],
                                         'message': j['error'][1]})
