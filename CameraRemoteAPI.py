@@ -170,7 +170,11 @@ class CameraRemoteAPI:
         return
 
     def stopContShooting(self):
-        raise NotImplemented
+        resp = self._apicall('camera',
+                             method='stopContShooting',
+                             params=[],
+                             version='1.0')
+        return
 
     def startMovieRec(self):
         raise NotImplemented
