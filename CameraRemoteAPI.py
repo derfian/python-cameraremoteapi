@@ -199,7 +199,12 @@ class CameraRemoteAPI:
 
 
     def stopAudioRec(self):
-        raise NotImplemented
+        resp = self._apicall('camera',
+                             method='stopAudioRec',
+                             params=[],
+                             version='1.0')
+        return resp['result'][0]
+
 
     def startIntervalStillRec(self):
         raise NotImplemented
