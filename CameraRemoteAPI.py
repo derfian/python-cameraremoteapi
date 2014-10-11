@@ -93,10 +93,14 @@ class CameraRemoteAPI:
             raise CameraRemoteError("Unknown endpoint '%r'" % endpoint)
 
         if self.trace:
-            print params
+            print self.urls[endpoint], "<-", params
+
         r = requests.post(self.urls[endpoint], data=json.dumps(params), headers=self._json_headers)
         j = r.json()
         r.close()
+
+        if self.trace:
+            print self.urls[endpoint], "->", j
         if 'error' in j:
             raise CameraRemoteRPCError({'code': j['error'][0],
                                         'message': j['error'][1]})
