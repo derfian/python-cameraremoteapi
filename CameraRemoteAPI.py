@@ -86,8 +86,11 @@ class CameraRemoteAPI:
             serviceurl = service.find('{%(ns)s}X_ScalarWebAPI_ActionList_URL' % locals()).text
             self.urls[servicetype] = serviceurl + '/' + servicetype
 
-    def _apicall(self, endpoint, params):
-        params['id'] = random.randint(1, 0x7FFFFFF)
+    def _apicall(self, endpoint, **params):
+        """ Perform an actual API call. """
+
+        if not 'id' in params:
+            params['id'] = random.randint(1, 0x7FFFFFF)
 
         if not endpoint in self.urls:
             raise CameraRemoteError("Unknown endpoint '%r'" % endpoint)
@@ -111,50 +114,45 @@ class CameraRemoteAPI:
 
     # Implement methods here:
     def getVersions(self):
-        endpoint = 'camera'
-        vals = dict(method="getVersions",
-                    params=[],
-                    version="1.0")
-        resp = self._apicall(endpoint, vals)
+        resp = self._apicall('camera',
+                             method='getVersions',
+                             params=[],
+                             version='1.0')
         return resp['result'][0]
 
     def setShootMode(self, shootmode):
-        endpoint = 'camera'
-        vals = dict(method="setShootMode",
-                    params=[shootmode],
-                    version="1.0")
-        resp = self._apicall(endpoint, vals)
+        resp = self._apicall('camera',
+                             method="setShootMode",
+                             params=[shootmode],
+                             version="1.0")
         return
 
     def getShootMode(self):
-        endpoint = 'camera'
-        vals = dict(method="getShootMode",
-                    params=[],
-                    version="1.0")
-        resp = self._apicall(endpoint, vals)
+        resp = self._apicall('camera',
+                             method="getShootMode",
+                             params=[],
+                             version="1.0")
         return resp['result'][0]
 
     def getSupportedShootMode(self):
-        endpoint = "camera"
-        vals = dict(method="getSupportedShootMode",
-                    params=[],
-                    version="1.0")
-        resp = self._apicall(endpoint, vals)
+        resp = self._apicall('camera',
+                             method="getSupportedShootMode",
+                             params=[],
+                             version="1.0")
         return resp['result']
 
     def getAvailableShootMode(self):
-        endpoint = "camera"
-        vals = dict(method="getAvailableShootMode",
-                    params=[],
-                    version="1.0")
-        resp = self._apicall(endpoint, vals)
+        resp = self._apicall('camera',
+                             method="getAvailableShootMode",
+                             params=[],
+                             version="1.0")
         return resp['result']
 
     def actTakePicture(self):
         resp = self._apicall('camera',
-                             dict(method='actTakePicture',
-                                  params=[],
-                                  version='1.0'))
+                             method='actTakePicture',
+                             params=[],
+                             version='1.0')
         return resp['result'][0]
 
     def awaitTakePicture(self):
