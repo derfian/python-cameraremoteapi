@@ -93,7 +93,7 @@ class CameraRemoteAPI:
             params['id'] = random.randint(1, 0x7FFFFFF)
 
         if not endpoint in self.urls:
-            raise CameraRemoteError("Unknown endpoint '%r'" % endpoint)
+            raise CameraRemoteError("Unknown endpoint %r" % endpoint)
 
         if self.trace:
             print self.urls[endpoint], "<-", params
